@@ -2,21 +2,28 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "pokedex",
+    description: "pokedex website",
+    pathPrefix: "",
   },
   plugins: [
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-plugin-manifest`,
       options: {
+        name: "Pokedex",
+        short_name: "Pokedex",
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#ffffff",
+        display: "standalone",
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -32,6 +39,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "DATA",
+        fieldName: "allPokemonData",
+        url: "https://graphql-pokeapi.graphcdn.app/",
+      },
     },
   ],
 };

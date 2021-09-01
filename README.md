@@ -1,54 +1,56 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
-
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Install project**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
+    To install and run the project locally, by running the following command:
 
     ```shell
-    cd my-gatsby-site/
-    npm run develop
+    npm install
+    npm start
     ```
 
-3.  **Open the code and start customizing!**
+    then open http://localhost:8000/ where the site is running now
 
-    Your site is now running at http://localhost:8000!
+2.  **Run in production build**
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+    To run the project in production mode
 
-4.  **Learn more**
+    ```shell
+    npm run build
+    npm run serve
+    ```
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+3.  **Dependencies used**
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```text
+gatsby modules
+├── gatsby-image, gatsby-sharp, gatsby-transformer-sharp - to handle image rendering
+├── gatsby-plugin-manifest, gatsby-plugin-offline, gatsby-plugin-sitemap - to handle pwa config and seo
+├── react-helmet, gatsby-plugin-react-helmet - to handle seo
+├── gatsby-source-graphql - to connect to external graphql API and put the schema under an arbitrary name
+├── gatsby-source-filesystem - to source local file as data that can be queried in gatsby
+└── gatsby-plugin-styled-components, styled-components - for styling react component
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+dev dependencies
+├── eslint-import-resolver-alias, eslint-plugin-jsx-a11y, eslint-plugin-import, eslint-plugin-react - to enforce some rules during development
+├── cypress, cypress-axe, @testing-library/cypress - used for end to end testing
+├── jest, react-test-renderer, start-server-and-test, identity-obj-proxy - modules used for unit testing and for testing server for cypress
+├── @testing-library/cypress, @testing-library/jest-dom, @testing-library/react - testing library used for testing in combination with jest and cypress
+└── babel-jest, babel-plugin-styled-components, babel-preset-gatsby - transformers modules used for babel configs
+```
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+4.  **To run tests**
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+To run the unit tests by executing the following command
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```
+npm test
+```
 
-## 🚀 Quick start (Gatsby Cloud)
+To run the end to end tests by executing the following command
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+```
+npm run test:e2e
+```
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+You can view the project by visting this url:

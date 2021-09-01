@@ -53,4 +53,4 @@ To run the end to end tests by executing the following command
 npm run test:e2e
 ```
 
-You can view the project by visting this url:
+You can view the project by visting this url: https://pokedex21.netlify.app/

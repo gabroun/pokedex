@@ -12,7 +12,7 @@ export const PokemonCard = styled.div`
   }
 
   span {
-    color: rgb(51 51 51 / 25%);
+    color: #939393;
     font-size: 130px;
     font-weight: 500;
   }
